@@ -1,6 +1,5 @@
 (ns leiningen.javac-resources
   (:require [clojure.java.io :as io]
-            [leiningen.compile :as lcompile]
             [leiningen.javac :as ljavac]
             [robert.hooke :as hooke])
   (:import [java.io File]))
@@ -26,7 +25,7 @@
           (.mkdirs (.getParentFile compiled))
           (io/copy resource compiled))))))
 
-(defn compile-hook
+(defn javac-hook
   [task & args]
   (apply task args)
   (copy-resources (first args)))
@@ -37,5 +36,5 @@
 
 (defn activate
   []
-  (hooke/add-hook #'lcompile/compile #'compile-hook))
+  (hooke/add-hook #'ljavac/javac #'javac-hook))
 

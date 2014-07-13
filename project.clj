@@ -1,4 +1,4 @@
-(defproject lein-javac-resources "0.1.0"
+(defproject lein-javac-resources "0.1.1"
   :description "Copy resources from :java-source-paths to compile path"
   :url "https://github.com/kumarshantanu/lein-javac-resources"
   :license {:name "Eclipse Public License"

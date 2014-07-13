@@ -10,7 +10,7 @@ resource files are placed with Java source files.
 Include the plugin in the `:plugins` vector in `project.clj`:
 
 ```clojure
-:plugins [[lein-javac-resources "0.1.0"]]
+:plugins [[lein-javac-resources "0.1.1"]]
 :omit-source true  ; avoids .java files ending up in the generated JAR file
 :hooks [leiningen.javac-resources]
 ```
