@@ -11,7 +11,7 @@ Include the plugin in the `:plugins` vector in `project.clj`:
 
 ```clojure
 :plugins [[lein-javac-resources "0.1.0"]]
-:omit-source true  # avoids .java files ending up in the generated JAR file
+:omit-source true  ; avoids .java files ending up in the generated JAR file
 :hooks [leiningen.javac-resources]
 ```
 
